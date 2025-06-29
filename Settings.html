@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - NutriDot</title>
+    <link rel="stylesheet" href="settings.css">
+    <script src="https://kit.fontawesome.com/d510b38842.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <img src="img/nut.png" alt="NutriDot Logo" class="navbar__logo-image" />
+            </a>    
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="SignHome.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="DashBoard.html" class="navbar__links">Dashboard</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="Scanner.html" class="navbar__links">Scanner</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="Account.html" class="navbar__links">Account</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="Settings.html" class="navbar__links active">Settings</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#" id="logout-btn" class="navbar__links">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Settings Content -->
+    <div class="settings-container">
+        <div class="settings-header">
+            <h1>Settings</h1>
+            <p>Customize your NutriDot experience</p>
+        </div>
+
+        <div class="settings-content">
+            <!-- Nutrition Goals Section -->
+            <div class="settings-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-bullseye"></i> Nutrition Goals</h2>
+                </div>
+                <div class="settings-grid">
+                    <div class="setting-item">
+                        <label for="daily-calories">Daily Calories Target</label>
+                        <input type="number" id="daily-calories" value="2000" min="1000" max="5000">
+                        <span class="unit">kcal</span>
+                    </div>
+                    <div class="setting-item">
+                        <label for="protein-goal">Protein Goal</label>
+                        <input type="number" id="protein-goal" value="150" min="50" max="300">
+                        <span class="unit">g</span>
+                    </div>
+                    <div class="setting-item">
+                        <label for="carbs-goal">Carbohydrates Goal</label>
+                        <input type="number" id="carbs-goal" value="250" min="50" max="500">
+                        <span class="unit">g</span>
+                    </div>
+                    <div class="setting-item">
+                        <label for="fat-goal">Fat Goal</label>
+                        <input type="number" id="fat-goal" value="65" min="20" max="150">
+                        <span class="unit">g</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notifications Section -->
+            <div class="settings-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-bell"></i> Notifications</h2>
+                </div>
+                <div class="settings-list">
+                    <div class="setting-toggle">
+                        <div class="toggle-info">
+                            <h4>Meal Reminders</h4>
+                            <p>Get reminded to log your meals</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="meal-reminders" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-toggle">
+                        <div class="toggle-info">
+                            <h4>Goal Achievements</h4>
+                            <p>Celebrate when you reach your nutrition goals</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="goal-achievements" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-toggle">
+                        <div class="toggle-info">
+                            <h4>Weekly Reports</h4>
+                            <p>Receive weekly nutrition summaries</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="weekly-reports">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacy & Security Section -->
+            <div class="settings-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-shield-alt"></i> Privacy & Security</h2>
+                </div>
+                <div class="settings-list">
+                    <div class="setting-toggle">
+                        <div class="toggle-info">
+                            <h4>Data Sharing</h4>
+                            <p>Share anonymized data to improve NutriDot</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="data-sharing">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-toggle">
+                        <div class="toggle-info">
+                            <h4>Two-Factor Authentication</h4>
+                            <p>Add an extra layer of security to your account</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="two-factor">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Preferences Section -->
+            <div class="settings-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-cog"></i> App Preferences</h2>
+                </div>
+                <div class="settings-grid">
+                    <div class="setting-item">
+                        <label for="theme-select">Theme</label>
+                        <select id="theme-select">
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                            <option value="auto">Auto</option>
+                        </select>
+                    </div>
+                    <div class="setting-item">
+                        <label for="units-select">Units</label>
+                        <select id="units-select">
+                            <option value="metric">Metric (g, kg, cm)</option>
+                            <option value="imperial">Imperial (oz, lb, in)</option>
+                        </select>
+                    </div>
+                    <div class="setting-item">
+                        <label for="language-select">Language</label>
+                        <select id="language-select">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                            <option value="ar">العربية</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Management Section -->
+            <div class="settings-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-database"></i> Data Management</h2>
+                </div>
+                <div class="data-actions">
+                    <button class="action-btn export-btn">
+                        <i class="fas fa-download"></i>
+                        Export My Data
+                    </button>
+                    <button class="action-btn backup-btn">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        Backup to Cloud
+                    </button>
+                    <button class="action-btn danger-btn">
+                        <i class="fas fa-trash-alt"></i>
+                        Delete All Data
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Save Button -->
+        <div class="save-section">
+            <button class="save-btn" id="save-settings">
+                <i class="fas fa-check"></i>
+                Save Settings
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>Help</h2>
+                    <a href="/">Contact Us</a>
+                    <a href="ChatBot.html">Chat Bot</a>
+                    <a href="/">Terms Of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__logo">
+            <a href="/" id="navbar__logo">
+                <img src="img/nut.png" alt="NutriDot Logo" class="navbar__logo-image" />
+            </a>  
+        </div>
+        <p class="website__rights">NutriDot 2025. All rights reserved</p>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="auth.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>

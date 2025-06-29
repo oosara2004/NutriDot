@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign In - NutriDot</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+</head>
+<body>
+    <div class="form-wrapper">
+        <div class="signin-container">
+            <h2>Welcome Back to NutriDot</h2>
+            <form id="signin-form" class="signin-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="button">Sign In</button>
+                <p class="forgot-password">
+                    <a href="#" id="forgot-password">Forgot password?</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>Help</h2>
+                    <a href="/">Contact Us</a>
+                    <a href="ChatBot.html">Chat Bot</a>
+                    <a href="/">Terms Of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__logo">
+            <a href="/" id="navbar__logo">
+                <img src="img/nut.png" alt="NutriDot Logo" class="navbar__logo-image" />
+            </a>  
+        </div>
+        <p class="website__rights">NutriDot 2025. All rights reserved</p>
+    </div>
+
+    <!-- Firebase Config and Auth Logic -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAe4GmQn4xLFlT6T3CjitDiIT5HiIqlrrI",
+            authDomain: "swflow1250.firebaseapp.com",
+            projectId: "swflow1250",
+            storageBucket: "swflow1250.firebasestorage.app",
+            messagingSenderId: "459441590687",
+            appId: "1:459441590687:web:249f329fcf4c5fc08cadaa",
+            measurementId: "G-P7J5X1EQY2"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+
+        // Sign in form handler
+        document.getElementById('signin-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            auth.signInWithEmailAndPassword(email, password)
+                .then(() => {
+                    window.location.href = "SignHome.html";
+                })
+                .catch(error => {
+                    alert("Sign in failed: " + error.message);
+                });
+        });
+
+        // Forgot password handler
+        document.getElementById('forgot-password').addEventListener('click', (e) => {
+            e.preventDefault();
+            const email = prompt("Enter your email to reset password:");
+            if (email) {
+                auth.sendPasswordResetEmail(email)
+                    .then(() => alert("Password reset email sent! Check your inbox."))
+                    .catch(error => alert("Error: " + error.message));
+            }
+        });
+    </script>
+</body>
+</html>

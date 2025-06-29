@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - NutriDot</title>
+    <link rel="stylesheet" href="SignHome.css">
+    <script src="https://kit.fontawesome.com/d510b38842.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <img src="img/nut.png" alt="NutriDot Logo" class="navbar__logo-image" />
+            </a>    
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="SignHome.html" class="navbar__links active">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="DashBoard.html" class="navbar__links">Dashboard</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="Scanner.html" class="navbar__links">Scanner</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="Account.html" class="navbar__links">Account</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="Settings.html" class="navbar__links">Settings</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#" id="logout-btn" class="navbar__links">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <div class="main">
+            <div class="main__container">
+                <div class="main__content">
+                    <h1 id="hero-title">Scan Smart</h1>
+                    <h2 id="hero-subtitle">Eat Smarter!</h2>
+                    <p id="hero-description">Track what matters to your body</p>
+                </div>
+                <div class="main_img--container">
+                    <img src="img/nutrition-scan-preview.svg" alt="NutriDot Nutrition Scanner Preview" id="main__img">
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions Section -->
+        <div class="quick-actions-section">
+            <div class="quick-actions-container">
+                <h2>Quick Actions</h2>
+                <div class="actions-grid">
+                    <a href="Scanner.html" class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <h3>Scan Product</h3>
+                        <p>Quickly scan a barcode to get nutrition info</p>
+                    </a>
+                    <a href="DashBoard.html" class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>View Dashboard</h3>
+                        <p>Check your nutrition progress and stats</p>
+                    </a>
+                    <a href="Account.html" class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>Manage Account</h3>
+                        <p>Update your profile and preferences</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>Help</h2>
+                    <a href="/">Contact Us</a>
+                    <a href="ChatBot.html">Chat Bot</a>
+                    <a href="/">Terms Of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__logo">
+            <a href="/" id="navbar__logo">
+                <img src="img/nut.png" alt="NutriDot Logo" class="navbar__logo-image" />
+            </a>  
+        </div>
+        <p class="website__rights">NutriDot 2025. All rights reserved</p>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

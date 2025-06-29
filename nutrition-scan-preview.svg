@@ -1,0 +1,109 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8f9fa"/>
+  
+  <!-- Phone mockup -->
+  <rect x="50" y="30" width="180" height="240" rx="20" fill="#333333"/>
+  <rect x="60" y="50" width="160" height="200" rx="10" fill="#ffffff"/>
+  
+  <!-- Scanner frame -->
+  <rect x="80" y="70" width="120" height="80" rx="5" fill="none" stroke="#2E7D32" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Barcode being scanned -->
+  <g transform="translate(90, 85)">
+    <rect x="0" y="0" width="2" height="50" fill="#000"/>
+    <rect x="4" y="0" width="1" height="50" fill="#000"/>
+    <rect x="7" y="0" width="3" height="50" fill="#000"/>
+    <rect x="12" y="0" width="1" height="50" fill="#000"/>
+    <rect x="15" y="0" width="2" height="50" fill="#000"/>
+    <rect x="19" y="0" width="1" height="50" fill="#000"/>
+    <rect x="22" y="0" width="4" height="50" fill="#000"/>
+    <rect x="28" y="0" width="1" height="50" fill="#000"/>
+    <rect x="31" y="0" width="2" height="50" fill="#000"/>
+    <rect x="35" y="0" width="1" height="50" fill="#000"/>
+    <rect x="38" y="0" width="3" height="50" fill="#000"/>
+    <rect x="43" y="0" width="1" height="50" fill="#000"/>
+    <rect x="46" y="0" width="2" height="50" fill="#000"/>
+    <rect x="50" y="0" width="1" height="50" fill="#000"/>
+    <rect x="53" y="0" width="4" height="50" fill="#000"/>
+    <rect x="59" y="0" width="1" height="50" fill="#000"/>
+    <rect x="62" y="0" width="2" height="50" fill="#000"/>
+    <rect x="66" y="0" width="1" height="50" fill="#000"/>
+    <rect x="69" y="0" width="3" height="50" fill="#000"/>
+    <rect x="74" y="0" width="1" height="50" fill="#000"/>
+    <rect x="77" y="0" width="2" height="50" fill="#000"/>
+    <rect x="81" y="0" width="1" height="50" fill="#000"/>
+    <rect x="84" y="0" width="4" height="50" fill="#000"/>
+    <rect x="90" y="0" width="1" height="50" fill="#000"/>
+    <rect x="93" y="0" width="2" height="50" fill="#000"/>
+    <rect x="97" y="0" width="1" height="50" fill="#000"/>
+    <rect x="100" y="0" width="3" height="50" fill="#000"/>
+  </g>
+  
+  <!-- Scan line animation effect -->
+  <line x1="80" y1="110" x2="200" y2="110" stroke="#2E7D32" stroke-width="2" opacity="0.7">
+    <animate attributeName="y1" values="70;150;70" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="70;150;70" dur="2s" repeatCount="indefinite"/>
+  </line>
+  
+  <!-- Nutrition info panel -->
+  <rect x="250" y="50" width="130" height="180" rx="10" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- Panel header -->
+  <text x="315" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">Nutrition Facts</text>
+  
+  <!-- Nutrition bars -->
+  <!-- Protein -->
+  <text x="260" y="95" font-family="Arial, sans-serif" font-size="10" fill="#333333">Protein</text>
+  <text x="370" y="95" font-family="Arial, sans-serif" font-size="10" fill="#2E7D32" font-weight="bold">12g</text>
+  <rect x="260" y="100" width="110" height="8" rx="4" fill="#e0e0e0"/>
+  <rect x="260" y="100" width="88" height="8" rx="4" fill="#2E7D32"/>
+  
+  <!-- Sugars -->
+  <text x="260" y="125" font-family="Arial, sans-serif" font-size="10" fill="#333333">Sugars</text>
+  <text x="370" y="125" font-family="Arial, sans-serif" font-size="10" fill="#FF9800" font-weight="bold">8g</text>
+  <rect x="260" y="130" width="110" height="8" rx="4" fill="#e0e0e0"/>
+  <rect x="260" y="130" width="50" height="8" rx="4" fill="#FF9800"/>
+  
+  <!-- Saturated Fat -->
+  <text x="260" y="155" font-family="Arial, sans-serif" font-size="10" fill="#333333">Sat. Fat</text>
+  <text x="370" y="155" font-family="Arial, sans-serif" font-size="10" fill="#2E7D32" font-weight="bold">3g</text>
+  <rect x="260" y="160" width="110" height="8" rx="4" fill="#e0e0e0"/>
+  <rect x="260" y="160" width="33" height="8" rx="4" fill="#2E7D32"/>
+  
+  <!-- Sodium -->
+  <text x="260" y="185" font-family="Arial, sans-serif" font-size="10" fill="#333333">Sodium</text>
+  <text x="365" y="185" font-family="Arial, sans-serif" font-size="10" fill="#2E7D32" font-weight="bold">180mg</text>
+  <rect x="260" y="190" width="110" height="8" rx="4" fill="#e0e0e0"/>
+  <rect x="260" y="190" width="22" height="8" rx="4" fill="#2E7D32"/>
+  
+  <!-- Calories -->
+  <text x="260" y="215" font-family="Arial, sans-serif" font-size="10" fill="#333333">Calories</text>
+  <text x="365" y="215" font-family="Arial, sans-serif" font-size="10" fill="#FF9800" font-weight="bold">150</text>
+  <rect x="260" y="220" width="110" height="8" rx="4" fill="#e0e0e0"/>
+  <rect x="260" y="220" width="44" height="8" rx="4" fill="#FF9800"/>
+  
+  <!-- Connecting arrow -->
+  <path d="M 220 110 Q 235 110 250 130" stroke="#2E7D32" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2E7D32"/>
+    </marker>
+  </defs>
+  
+  <!-- Floating scan particles -->
+  <circle cx="100" cy="60" r="2" fill="#2E7D32" opacity="0.6">
+    <animate attributeName="cy" values="60;40;60" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="180" cy="65" r="1.5" fill="#81C784" opacity="0.5">
+    <animate attributeName="cy" values="65;45;65" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="140" cy="55" r="1" fill="#2E7D32" opacity="0.4">
+    <animate attributeName="cy" values="55;35;55" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>

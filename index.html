@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriDot</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d510b38842.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <img src="img/nut.png" alt="NutriDot Logo" class="navbar__logo-image" />
+            </a>   
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links active">Home</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="SignIn.html" class="button">Sign In</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <div class="main">
+            <div class="main__container">
+                <div class="main__content">
+                    <h1 id="hero-title">Scan Smart</h1>
+                    <h2 id="hero-subtitle">Eat Smarter!</h2>
+                    <p id="hero-description">Track what matters to your body</p>
+                    <button class="main__btn">
+                        <a id="button-signUp" href="SignUp.html">Sign Up</a>
+                    </button>
+                </div>
+                <div class="main_img--container">
+                    <img src="img/nutrition-scan-preview.svg" alt="NutriDot Nutrition Scanner Preview" id="main__img">
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features-section">
+            <div class="features-container">
+                <h2>Why Choose NutriDot?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <h3>Smart Scanning</h3>
+                        <p>Instantly scan product barcodes to get detailed nutritional information</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Track Progress</h3>
+                        <p>Monitor your daily nutrition intake with beautiful charts and insights</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Family Friendly</h3>
+                        <p>Manage nutrition for your entire family in one convenient app</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>Help</h2>
+                    <a href="/">Contact Us</a>
+                    <a href="ChatBot.html">Chat Bot</a>
+                    <a href="/">Terms Of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__logo">
+            <a href="/" id="navbar__logo">
+                <img src="img/nut.png" alt="NutriDot Logo" class="navbar__logo-image" />
+            </a>  
+        </div>
+        <p class="website__rights">NutriDot 2025. All rights reserved</p>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

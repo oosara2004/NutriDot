@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanner - NutriDot</title>
+    <link rel="stylesheet" href="scanner.css">
+    <script src="https://kit.fontawesome.com/d510b38842.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <img src="img/nut.png" alt="NutriDot Logo" class="navbar__logo-image" />
+            </a>    
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="SignHome.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="DashBoard.html" class="navbar__links">Dashboard</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="Scanner.html" class="navbar__links active">Scanner</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="Account.html" class="navbar__links">Account</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="Settings.html" class="navbar__links">Settings</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#" id="logout-btn" class="navbar__links">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="main-content">
+        <!-- Scanner Content -->
+        <div class="scanner-container">
+            <div class="scanner-header">
+                <h1>Nutrition Scanner</h1>
+                <p>Scan product barcodes to get instant nutritional information</p>
+            </div>
+
+            <!-- Scan Section -->
+            <div class="scan-section" id="scan-section">
+                <div class="scan-area">
+                    <div class="scan-frame">
+                        <div class="scan-corners"></div>
+                        <i class="fas fa-qrcode scan-icon"></i>
+                        <p>Position barcode within the frame</p>
+                    </div>
+                    <button id="scan-btn" class="scan-btn">
+                        <i class="fas fa-qrcode"></i>
+                        Start Scanning
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section" id="results-section" style="display: none;">
+                <div class="product-info">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/4198019/pexels-photo-4198019.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Scanned Product" />
+                    </div>
+                    <div class="nutrition-bars">
+                        <h3>Nutritional Information</h3>
+                        
+                        <div class="nutrition-item">
+                            <div class="nutrition-label">
+                                <span class="nutrient-name">Protein</span>
+                                <span class="nutrient-value" id="protein-value">12g</span>
+                                <span class="nutrition-percentage" id="protein-percentage">80%</span>
+                            </div>
+                            <div class="nutrition-bar">
+                                <div class="bar-fill protein-bar" id="protein-bar" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="nutrition-item">
+                            <div class="nutrition-label">
+                                <span class="nutrient-name">Sugars</span>
+                                <span class="nutrient-value" id="sugars-value">8g</span>
+                                <span class="nutrition-percentage" id="sugars-percentage">45%</span>
+                            </div>
+                            <div class="nutrition-bar">
+                                <div class="bar-fill sugars-bar" id="sugars-bar" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="nutrition-item">
+                            <div class="nutrition-label">
+                                <span class="nutrient-name">Saturated Fat</span>
+                                <span class="nutrient-value" id="saturated-fat-value">3g</span>
+                                <span class="nutrition-percentage" id="saturated-fat-percentage">25%</span>
+                            </div>
+                            <div class="nutrition-bar">
+                                <div class="bar-fill saturated-fat-bar" id="saturated-fat-bar" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="nutrition-item">
+                            <div class="nutrition-label">
+                                <span class="nutrient-name">Sodium</span>
+                                <span class="nutrient-value" id="sodium-value">180mg</span>
+                                <span class="nutrition-percentage" id="sodium-percentage">15%</span>
+                            </div>
+                            <div class="nutrition-bar">
+                                <div class="bar-fill sodium-bar" id="sodium-bar" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="nutrition-item">
+                            <div class="nutrition-label">
+                                <span class="nutrient-name">Calories</span>
+                                <span class="nutrient-value" id="calories-value">150kcal</span>
+                                <span class="nutrition-percentage" id="calories-percentage">35%</span>
+                            </div>
+                            <div class="nutrition-bar">
+                                <div class="bar-fill calories-bar" id="calories-bar" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="add-to-diary-btn" class="btn-primary">
+                        <i class="fas fa-plus"></i>
+                        Add to Food Diary
+                    </button>
+                    <button id="scan-another-btn" class="btn-secondary">
+                        <i class="fas fa-qrcode"></i>
+                        Scan Another
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>Help</h2>
+                    <a href="/">Contact Us</a>
+                    <a href="ChatBot.html">Chat Bot</a>
+                    <a href="/">Terms Of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__logo">
+            <a href="/" id="navbar__logo">
+                <img src="img/nut.png" alt="NutriDot Logo" class="navbar__logo-image" />
+            </a>  
+        </div>
+        <p class="website__rights">NutriDot 2025. All rights reserved</p>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="auth.js"></script>
+    <script src="scanner.js"></script>
+</body>
+</html>
